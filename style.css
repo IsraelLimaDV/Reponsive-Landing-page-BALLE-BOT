@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-size: 100%;
+    background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);
+}
+
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.header-img{
+    height: 70px;
+}
+
+.nav-list{
+    display: flex;
+    gap: 32px;
+}
+
+.header-menu-item{
+    font-family: 'Sarala', sans-serif;
+    color: #FFF2E7;
+    font-weight: 400;
+    font-size: 18px;
+    opacity: 0.8;
+    cursor:pointer;
+}
+
+.header-menu-item:hover{
+    opacity: 1;
+    transition:ease-in-out;
+    transition-duration: 0.4s;
+}
+
+@media (max-width: 900px){
+
+    .header{
+        display: flex;
+        justify-content:space-between;
+    }
+
+    body{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .mobile-menu{
+        display: block;
+        right: 0;
+    }
+    .mobile-menu div{
+        width: 32px;
+        height: 2px;
+        background: #FFF;
+        margin: 8px;
+        cursor:pointer;
+    }
+
+    .nav-list{
+        position: absolute;
+        top: 15vh;
+        right: 0;
+        width: 100vw;
+        height: 90vh;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: #2F2325;
+        padding: 20px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        text-align: center;
+ }
+
+    .nav-list a{
+        margin-top: 15px;
+    }
+
+    .nav-list.active {
+        transform: translateX(0)
+    }
+
+}
+.container{
+    border-top: 0.4px solid #FFF2E7;
+    margin-bottom: 48px;
+}
+
+.main-container{
+    display:flex;
+    align-items: center ;
+    justify-content: space-around;
+}
+
+
+.main-container-text{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.main-container-title{
+    font-family:'Righteous', cursive;
+    font-weight: 400;
+    font-size: 64px;
+    color: #FFF2e7
+}
+
+.main-container-subtittle{
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400px;
+    font-size: 24px;
+    color: #ECD6c4
+}
+
+#main-container-button{
+    position: relative;
+    background-color:#ECD6c4;
+    opacity: 80%;
+    width: 180px;
+    height: 60px;
+    font-weight: 400px;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-family: 'Sarala', sans-serif;
+    font-size: 19px;
+    border:none;
+    display: inline-block;
+}
+
+.main-container-button:hover{
+    opacity: 100%;
+    transition: ease-in-out;
+    transition-duration: 0.2s;
+}
+
+.main-container-img{
+    height: 450px;
+}
+
+@media (max-width: 900px){
+    .main-container{
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+        
+    }
+    .main-container-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+   
+
+    .main-container-subtittle{
+        text-align: center;
+    }
+
+    .main-container-img{
+        height: 350px;
+    }
+}
+
+.second-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.second-container-title{
+    border-top: 0.4px solid #FFF2E7;
+    padding-top: 48px;
+    font-family:'Righteous', cursive;
+    font-weight: 200px;
+    font-size: 24px;
+    color: #FFF2e7;
+    margin-bottom: 16px;
+    letter-spacing: 3px;
+}
+
+.second-container-text{
+    font-weight: 200px;
+    font-family: 'Sarala', sans-serif;
+    font-size: 18px;
+    color: #ECD6c4;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px){
+    .second-container-title{
+        font-size: 19px;
+    }
+
+    .second-container-text{
+        font-size: 16px;
+        padding: 10px;
+    }
+
+
+}
+
+.footer{
+    padding: 42px;
+    border-top: 0.2px solid #FFF2E7;
+}
+
+.footer-img{
+    height: 48px;
+    display: block;
+    margin: 0 auto;
+}
